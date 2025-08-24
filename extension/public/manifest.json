@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LinkSight AI",
+  "version": "1.0.0",
+  "description": "Analyzes LinkedIn job descriptions with AI to provide summaries and action plans.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/jobs/view/*"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["https://www.linkedin.com/jobs/view/*"],
+        "js": ["content.js"]
+    }
+]
+}
